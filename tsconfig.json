@@ -20,5 +20,6 @@
     "typeRoots": [                         /* 型定義ファイルのパス */
       "node_modules/@types"
     ],
+    "jsx": "react"
   }
 }

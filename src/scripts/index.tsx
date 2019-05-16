@@ -1,10 +1,19 @@
+
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+
 import firebase from "firebase/app";
 import firebaseui from 'firebaseui';
 import 'firebaseui/dist/firebaseui.css';
 import axios, { AxiosResponse, AxiosPromise } from 'axios';
-import { trace } from './modules/sub';
+// import { Hoge, trace } from './modules/sub';
+import * as sub from './modules/sub';
+import App from './modules/App';
 
-trace('hoge');
+
+const h:sub.Hoge = new sub.Hoge();
+h.hoge();
+sub.trace('fuga');
 const tongariArr: number[] = [1,2,4];
 console.log(tongariArr.includes(4));
 
@@ -67,3 +76,5 @@ async function execute(): Promise<any> {
 
 execute();
 
+const app = document.getElementById('app');
+ReactDOM.render(<App />, app);
