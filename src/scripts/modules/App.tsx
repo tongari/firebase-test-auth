@@ -6,27 +6,27 @@ import 'moment/locale/ja';
 import ja from 'date-fns/locale/ja';
 
 export default class App extends React.PureComponent<{}, {
-  startDate: moment.Moment
+  startDate: string | null
 }> {
   constructor(props: any) {
     super(props)
     moment.locale('ja')
     registerLocale('ja', ja);
     this.state = {
-      startDate: moment(),
+      startDate: null,
     };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(date: Date) {
     this.setState({
-      startDate: moment(date)
+      startDate: date? moment(date).format('YYYY-MM-DD').toString() : ''
     });
   }
   
   render() {
     return (
       <DatePicker
-        selected={this.state.startDate.toDate()}
+        selected={this.state.startDate ? moment(this.state.startDate).toDate() : null}
         onChange={this.handleChange}
         dateFormat="yyyy-MM-dd"
         dateFormatCalendar="yyyy年MM月"
