@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Calendar from './Calendar'
 import SelectBox from './SelectBox'
+import MultiSelectBox from './MultiSelectBox'
 
 export default class App extends React.PureComponent<{}, {
   startDate: string | null
@@ -14,6 +15,7 @@ export default class App extends React.PureComponent<{}, {
       <>
         <Calendar />
         <SelectBox />
+        <MultiSelectBox />
       </>
     );
   }

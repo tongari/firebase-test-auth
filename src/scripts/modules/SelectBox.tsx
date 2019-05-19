@@ -2,7 +2,7 @@ import * as React from 'react'
 import { SimpleSelect, OptionValue } from 'react-selectize'
 import 'react-selectize/themes/index.css'
 
-export default class App extends React.PureComponent<{}, {
+export default class SelectBox extends React.PureComponent<{}, {
   master: OptionValue[],
   selectedValue: number | null
 }> {
@@ -41,7 +41,7 @@ export default class App extends React.PureComponent<{}, {
         value={this.filterOptions()}
         options = {this.state.master} 
         placeholder = "Select a fruit"
-        theme = "material"
+        theme = "bootstrap3"
         transitionEnter = {true}
         onValueChange={this.onChange}
       />
