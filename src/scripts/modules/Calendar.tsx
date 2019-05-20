@@ -1,8 +1,7 @@
 import * as React from 'react'
 import DatePicker, { registerLocale } from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'
-import moment from 'moment'
-import 'moment/locale/ja';
+import moment from 'moment-timezone'
 import ja from 'date-fns/locale/ja';
 
 export default class App extends React.PureComponent<{}, {
@@ -10,7 +9,7 @@ export default class App extends React.PureComponent<{}, {
 }> {
   constructor(props: any) {
     super(props)
-    moment.locale('ja')
+    moment.tz.setDefault('Asia/Tokyo')
     registerLocale('ja', ja);
     this.state = {
       startDate: null,

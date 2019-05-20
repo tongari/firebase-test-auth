@@ -4,7 +4,12 @@ import SelectBox from './SelectBox'
 import MultiSelectBox from './MultiSelectBox'
 
 export default class App extends React.PureComponent<{}, {
-  startDate: string | null
+  master: {
+    data: {
+      name: string
+      age: number
+    }
+  }
 }> {
   constructor(props: any) {
     super(props)
