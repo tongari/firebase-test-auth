@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import moment from 'moment-timezone'
 import ja from 'date-fns/locale/ja';
 
-export default class App extends React.PureComponent<{}, {
+export default class Calendar extends React.PureComponent<{}, {
   startDate: string | null
 }> {
   constructor(props: any) {
