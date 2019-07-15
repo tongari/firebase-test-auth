@@ -3,6 +3,7 @@ import Child from './Child'
 import Calendar from './Calendar'
 import SelectBox from './SelectBox'
 import MultiSelectBox from './MultiSelectBox'
+import HooksComponent from './HooksComponent'
 
 export default class App extends React.Component<{}, {
   // master: {
@@ -46,6 +47,7 @@ export default class App extends React.Component<{}, {
         <Calendar />
         <SelectBox />
         <MultiSelectBox />
+        <HooksComponent />
       </>
       )
     } else {
